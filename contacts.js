@@ -14,30 +14,58 @@ const write = async (payload) => {
 };
 
 // TODO: задокументувати кожну функцію
-function listContacts() {
+async function listContacts() {
   // ...твій код
-  const contacts = fs.readFile(contactsPath);
-  return JSON.parse(contacts);
+  try {
+    const contacts = await fs.readFile(contactsPath);
+    return JSON.parse(contacts);
+  } catch {
+    console.log(Error.INVALID_ID);
+  }
 }
 
-function getContactById(contactId) {
+async function getContactById(contactId) {
   // ...твій код
-  const contacts = listContacts();
-  const goal = contacts.find((contact) => contact.id === contactId);
-  return goal || Error.INVALID_ID;
+  try {
+    const contacts = await listContacts();
+    const index = contacts.findIndex((contact) => contact.id === contactId);
+    if (index === -1) {
+      throw new Error(Error.INVALID_ID);
+    }
+    return contacts[index];
+  } catch {
+    console.log(Error.INVALID_ID);
+  }
 }
 
-function removeContact(contactId) {
+async function removeContact(contactId) {
   // ...твій код
+  try {
+    const contacts = await listContacts();
+    const index = contacts.findIndex((contact) => contact.id === contactId);
+    if (index === -1) {
+      return null;
+    }
+    const removedContact = contacts[index];
+    contacts.splice(index, 1);
+    write(contacts);
+    return removedContact;
+  } catch {
+    console.log(Error.INVALID_ID);
+  }
 }
 
-function addContact(name, email, phone) {
+async function addContact(name, email, phone) {
   // ...твій код
-  const contacts = listContacts();
-  const payload = { id: nanoid(), name, email, phone };
-  contacts.push(payload);
-  write(contacts);
-  return payload;
+  try {
+    const contacts = await listContacts();
+    const payload = { id: nanoid(), name, email, phone };
+    contacts.push(payload);
+    write(contacts);
+    return payload;
+  } catch {
+    console.log(Error.INVALID_ID);
+  }
 }
 
 module.exports = {
