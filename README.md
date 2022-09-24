@@ -12,7 +12,7 @@ node index.js --action="list"
 
 node index.js --action="get" --id=5
 
-![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionGetId5.png")
+![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/raw/main/screenshots/actionGetId5.png")
 
 # Додаємо контакт
 
