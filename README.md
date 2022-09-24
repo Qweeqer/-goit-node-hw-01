@@ -6,22 +6,22 @@
 
 node index.js --action="list"
 
-![Image alt] ("./screenshots/actionlist.png")
+![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionlist.png")
 
 # Отримуємо контакт по id
 
 node index.js --action="get" --id=5
 
-![Image alt] ("./screenshots/actionGetId5.png")
+![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionGetId5.png")
 
 # Додаємо контакт
 
 node index.js --action="add" --name="Mango" --email="mango@gmail.com" --phone="322-22-22"
 
-![Image alt] ("./screenshots/actionAddContact.png")
+![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionAddContact.png")
 
 # Видаляємо контакт
 
 node index.js --action="remove" --id=3
 
-![Image alt] ("./screenshots/actionRemoveId3.png")
+![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionRemoveId3.png")
