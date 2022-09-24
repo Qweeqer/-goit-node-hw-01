@@ -9,8 +9,8 @@ const Error = {
   INVALID_ID: "No contact with such ID.",
 };
 
-const write = async (payload) => {
-  await fs.writeFile(contactsPath, JSON.stringify(payload, null, 2));
+const write = async (newContact) => {
+  await fs.writeFile(contactsPath, JSON.stringify(newContact, null, 2));
 };
 
 // TODO: задокументувати кожну функцію
@@ -46,10 +46,9 @@ async function removeContact(contactId) {
     if (index === -1) {
       return null;
     }
-    const removedContact = contacts[index];
-    contacts.splice(index, 1);
+    const [result] = contacts.splice(index, 1);
     write(contacts);
-    return removedContact;
+    return result;
   } catch {
     console.log(Error.INVALID_ID);
   }
@@ -59,10 +58,10 @@ async function addContact(name, email, phone) {
   // ...твій код
   try {
     const contacts = await listContacts();
-    const payload = { id: nanoid(), name, email, phone };
-    contacts.push(payload);
+    const newContact = { id: nanoid(), name, email, phone };
+    contacts.push(newContact);
     write(contacts);
-    return payload;
+    return newContact;
   } catch {
     console.log(Error.INVALID_ID);
   }
