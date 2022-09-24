@@ -7,6 +7,10 @@
 node index.js --action="list"
 
 ![Image text] ("https://github.com/Qweeqer/goit-node-hw-01/raw/main/image/actionlist.png")
+![alt text] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/image/actionlist.png")
+![alt text] ("https://raw.githubusercontent.com/Qweeqer/goit-node-hw-01/blob/main/image/to/actionlist.png")
+![alt text] (relative/Qweeqer/goit-node-hw-01/blob/main/image/actionlist.png)
+![screenshots] (image/actionlist.png)
 
 # Отримуємо контакт по id
 
