@@ -6,13 +6,13 @@
 
 node index.js --action="list"
 
-![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionlist.png")
+![Image text] ("https://raw.github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionlist.png")
 
 # Отримуємо контакт по id
 
 node index.js --action="get" --id=5
 
-![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/raw/main/screenshots/actionGetId5.png")
+![Image alt] ("https://github.com/Qweeqer/goit-node-hw-01/blob/main/screenshots/actionGetId5.png")
 
 # Додаємо контакт
 
