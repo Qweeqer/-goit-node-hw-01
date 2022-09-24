@@ -1,7 +1,5 @@
 # goit-node-hw-01
 
-![GitHub actions settings](https://media.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.gif)
-
 # Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
 
 node index.js --action="list"
