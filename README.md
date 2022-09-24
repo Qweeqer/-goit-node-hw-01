@@ -6,7 +6,6 @@
 
 node index.js --action="list"
 
-![alt text] ("https://raw.githubusercontent.com/Qweeqer/goit-node-hw-01/main/image/actionAddContact.png")
 ![GitHub actions settings](./image/actionlist.png)
 
 # Отримуємо контакт по id
