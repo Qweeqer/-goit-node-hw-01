@@ -2,7 +2,6 @@ const fs = require("fs/promises");
 const path = require("path");
 const { nanoid } = require("nanoid");
 
-// Розкоментуйте і запиши значення
 const contactsPath = path.join(__dirname, "db/contacts.json");
 
 const Error = {
@@ -13,9 +12,8 @@ const write = async (newContact) => {
   await fs.writeFile(contactsPath, JSON.stringify(newContact, null, 2));
 };
 
-// TODO: задокументувати кожну функцію
+// TODO: функції для работи з контактами
 async function listContacts() {
-  // ...твій код
   try {
     const contacts = await fs.readFile(contactsPath);
     return JSON.parse(contacts);
@@ -25,7 +23,6 @@ async function listContacts() {
 }
 
 async function getContactById(contactId) {
-  // ...твій код
   try {
     const contacts = await listContacts();
     const index = contacts.findIndex((contact) => contact.id === contactId);
@@ -39,7 +36,6 @@ async function getContactById(contactId) {
 }
 
 async function removeContact(contactId) {
-  // ...твій код
   try {
     const contacts = await listContacts();
     const index = contacts.findIndex((contact) => contact.id === contactId);
@@ -55,7 +51,6 @@ async function removeContact(contactId) {
 }
 
 async function addContact(name, email, phone) {
-  // ...твій код
   try {
     const contacts = await listContacts();
     const newContact = { id: nanoid(), name, email, phone };
